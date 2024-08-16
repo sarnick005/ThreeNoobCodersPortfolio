@@ -3,8 +3,8 @@ import { motion } from "framer-motion";
 
 const ServiceCard = ({ title, index, isSelected, onClick }) => (
   <motion.div
-    className={`bg-white overflow-hidden shadow hover:shadow-xl transition-shadow duration-300 ${
-      isSelected ? "ring-2 ring-blue-500" : ""
+    className={`overflow-hidden shadow hover:shadow-xl transition-shadow duration-300 ${
+      isSelected ? "ring-2 ring-black" : ""
     } rounded-full py-4 px-6 cursor-pointer`}
     initial={{ opacity: 0, y: 50 }}
     animate={{ opacity: 1, y: 0 }}
@@ -23,10 +23,10 @@ const Services = ({ onSelectService }) => {
     "Web Development",
     "Mobile Apps",
     "UI/UX Design",
-    // Add more services as needed
+    // "Figma"
   ];
 
-  // Set "Web Development" as the default selected service
+ 
   const [selectedService, setSelectedService] = useState("Web Development");
 
   const handleSelectService = (service) => {
@@ -35,7 +35,10 @@ const Services = ({ onSelectService }) => {
   };
 
   return (
-    <section id="services" className="bg-gray-50 py-12 sm:py-16 lg:py-20">
+    <section
+      id="services"
+      className="bg-gradient-to-br from-gray-50 to-gray-100 py-12 sm:py-16 lg:py-20"
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           className="text-center"

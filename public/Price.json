@@ -1,0 +1,102 @@
+{
+  "Web Development": [
+    {
+      "name": "Basic",
+      "price": "3000",
+      "features": ["5 Pages", "Basic SEO", "Responsive Design"],
+      "image":
+          "https://i.pinimg.com/736x/1b/72/99/1b7299a5f39dc14255daeaabfd401bc9.jpg"
+      
+    },
+    {
+      "name": "Standard",
+      "price": "6000",
+      "features": [
+        "10 Pages",
+        "Advanced SEO",
+        "CMS Integration",
+        "E-commerce Features"
+      ],
+       "image":
+          "https://i.pinimg.com/564x/54/17/f8/5417f86e5bdd7d49e00b2b5c1267e294.jpg"
+    },
+    {
+      "name": "Premium",
+      "price": "10000",
+      "features": [
+        "Unlimited Pages",
+        "Full SEO Suite",
+        "Custom Functionality",
+        "24/7 Support"
+      ],
+      "image":
+          "https://i.pinimg.com/736x/fc/fa/7e/fcfa7ecb8e70529c0594cdb92e8a69ba.jpg"
+    }
+  ],
+  "Mobile Apps": [
+    {
+      "name": "Starter",
+      "price": "5000",
+      "features": ["iOS or Android", "Basic Features", "App Store Submission"],
+      "image":
+          "https://i.pinimg.com/564x/10/27/4f/10274fc673de5e1ff38e32bf56e741da.jpg"
+    },
+    {
+      "name": "Professional",
+      "price": "8000",
+      "features": [
+        "iOS and Android",
+        "Advanced Features",
+        "Push Notifications",
+        "Analytics Integration"
+      ],
+       "image":
+          "https://i.pinimg.com/736x/a6/b6/2f/a6b62f4e4a5a0d7ef12f95e2780b57b4.jpg"
+    },
+    {
+      "name": "Enterprise",
+      "price": "15000",
+      "features": [
+        "Cross-platform",
+        "Custom API Integration",
+        "Scalable Architecture",
+        "Ongoing Maintenance"
+      ],
+      "image":
+          "https://i.pinimg.com/564x/ca/a1/fb/caa1fb2996669a2133be0cf6f8c91bdc.jpg"
+    }
+  ],
+  "UI/UX Design": [
+    {
+      "name": "Starter",
+      "price": "2500",
+      "features": ["Basic Wireframes", "Low Fidelity Mockups", "User Research"],
+      "image":
+          "https://i.pinimg.com/564x/d3/db/f4/d3dbf4f4dc9a9b84c7ca415876b461dc.jpg"
+    },
+    {
+      "name": "Professional",
+      "price": "4000",
+      "features": [
+        "High Fidelity Mockups",
+        "User Testing",
+        "Interactive Prototypes",
+        "Advanced Analytics"
+      ],
+       "image":
+          "https://i.pinimg.com/564x/96/82/11/968211cf857efe1a8387a4e7817f5a0a.jpg"
+    },
+    {
+      "name": "Enterprise",
+      "price": "10000",
+      "features": [
+        "Full Product Design",
+        "Custom API Integration",
+        "Scalable UI Systems",
+        "Ongoing Support"
+      ],
+      "image":
+          "https://i.pinimg.com/564x/4a/fa/1f/4afa1f5e12d6a741be4b6ea49690384d.jpg"
+    }
+  ]
+}

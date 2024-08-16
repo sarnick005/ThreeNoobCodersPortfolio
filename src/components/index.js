@@ -6,6 +6,8 @@ import Projects from "./Projects";
 import Pricing from "./Pricing";
 import AboutUs from "./AboutUs";
 import ContactUs from "./ContactUs";
+import FAQAccordion from "./FAQAccordion";
+import ScrollToTop from "./ScrollToTop"
 
 export {
   Navbar,
@@ -16,4 +18,6 @@ export {
   Pricing,
   AboutUs,
   ContactUs,
+  FAQAccordion,
+  ScrollToTop
 };

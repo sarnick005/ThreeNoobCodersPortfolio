@@ -1,6 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { Instagram, Mail, Video, Linkedin } from "lucide-react";
+import { Instagram,Twitter,X, Mail, Video, Linkedin } from "lucide-react";
+
 
 const AnimatedIcon = ({ icon: Icon, href }) => (
   <motion.a
@@ -18,7 +19,7 @@ const ContactUs = () => {
   return (
     <motion.section
       id="contact-us"
-      className="bg-gray-50 py-12 sm:py-16 lg:py-20"
+      className="py-12 sm:py-16 lg:py-20"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.5 }}
@@ -43,10 +44,10 @@ const ContactUs = () => {
           animate={{ opacity: 1 }}
           transition={{ duration: 0.5, delay: 0.2 }}
         >
-          <AnimatedIcon icon={Instagram} href="#" />
-          <AnimatedIcon icon={Mail} href="#" />
-          <AnimatedIcon icon={Video} href="#" />
-          <AnimatedIcon icon={Linkedin} href="#" />
+          <AnimatedIcon icon={Instagram} href="https://x.com/ThreeNoobCoders" />
+          <AnimatedIcon icon={Mail} href="mailto:threenoobcoders@gmail.com" />
+          <AnimatedIcon icon={Twitter} href="https://x.com/ThreeNoobCoders" />
+          <AnimatedIcon icon={Linkedin} href="https://x.com/ThreeNoobCoders" />
         </motion.div>
       </div>
     </motion.section>

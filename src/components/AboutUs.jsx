@@ -1,6 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 
+
 const TeamMember = ({ name, role, imageUrl, index }) => (
   <motion.div
     className="space-y-6"
@@ -11,7 +12,7 @@ const TeamMember = ({ name, role, imageUrl, index }) => (
     <motion.img
       className="mx-auto h-40 w-40 rounded-full xl:w-56 xl:h-56"
       src={imageUrl}
-      alt={name}
+      alt={`${name} - ${role}`}
       whileHover={{ scale: 1.1 }}
       transition={{ type: "spring", stiffness: 300 }}
     />
@@ -26,19 +27,30 @@ const TeamMember = ({ name, role, imageUrl, index }) => (
 
 const AboutUs = () => {
   const team = [
-    { name: "Jane Cooper", role: "CEO", imageUrl: "https://i.pinimg.com/736x/9a/39/c8/9a39c85f9d87740dd04fd04aeb9d0d9e.jpg" },
-    { name: "John Doe", role: "CTO", imageUrl: "https://i.pinimg.com/736x/9a/39/c8/9a39c85f9d87740dd04fd04aeb9d0d9e.jpg" },
     {
-      name: "Alice Smith",
-      role: "Head of Design",
-      imageUrl: "https://i.pinimg.com/736x/9a/39/c8/9a39c85f9d87740dd04fd04aeb9d0d9e.jpg",
+      name: "Shubhayan Bagchi",
+      role: "CSE undergrad",
+      imageUrl:
+        "https://media.licdn.com/dms/image/v2/D4D03AQEFHOZ7bFrqpw/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1692103718093?e=1729123200&v=beta&t=5tthvOZ1PWTc-nK4_weoPmrKIDtWcRfTV64SFpn1cXE",
+    },
+    {
+      name: "Sarnick Chakraborty",
+      role: "CSE undergrad",
+      imageUrl:
+        "https://media.licdn.com/dms/image/v2/D4D03AQGd8nqtkhYXTA/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1722316313540?e=1729123200&v=beta&t=BGDKGcD7Gk1okDlnUXQpswomkoznodzVrXJT6ULy6EE",
+    },
+    {
+      name: "Subhakash Paul",
+      role: "CSE undergrad",
+      imageUrl:
+        "https://media.licdn.com/dms/image/v2/D4D03AQFU4SQgwCNakQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1684912920202?e=1729123200&v=beta&t=HRBZiuTPbVYTfRkAor8pJeMiXBN4CwIE_GCvPaxR1Hk",
     },
   ];
 
   return (
     <motion.section
       id="about-us"
-      className="bg-white py-12 sm:py-16 lg:py-20"
+      className="py-12 sm:py-16 lg:py-20 bg-gradient-to-br from-gray-50 to-gray-100"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.5 }}
