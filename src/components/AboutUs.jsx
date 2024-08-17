@@ -1,5 +1,8 @@
 import React from "react";
 import { motion } from "framer-motion";
+import shubhayan from "../assets/about/shubhayan.jpg"
+import sarnick from "../assets/about/myimage.jpg"
+import subhakash from "../assets/about/subhakash.jpg"
 
 
 const TeamMember = ({ name, role, imageUrl, index }) => (
@@ -31,19 +34,19 @@ const AboutUs = () => {
       name: "Shubhayan Bagchi",
       role: "Frontend Developer",
       imageUrl:
-        "../assets/about/shubhayan.jpg",
+        shubhayan,
     },
     {
       name: "Sarnick Chakraborty",
       role: "Backend Developer",
       imageUrl:
-        "../assets/about/myimage.jpg",
+        sarnick,
     },
     {
       name: "Subhakash Paul",
       role: "Design Lead",
       imageUrl:
-        "../assets/about/subhakash.jpg",
+        subhakash,
     },
   ];
 
