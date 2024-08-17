@@ -83,7 +83,7 @@ function TechStack() {
         animate={{ opacity: 1, y: 0 }}
         className="text-4xl font-bold text-gray-800 text-center mb-8"
       >
-        My Tech Stack
+        Tech Stack
       </motion.h1>
       <div className="flex flex-col md:flex-row gap-8 justify-between">
         <TechSection title="Frontend" icons={frontendIcons} />
