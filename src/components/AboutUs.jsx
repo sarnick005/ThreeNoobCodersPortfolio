@@ -31,19 +31,19 @@ const AboutUs = () => {
       name: "Shubhayan Bagchi",
       role: "Frontend Developer",
       imageUrl:
-        "../../public/images/about/shubhayan.jpg",
+        "../assets/about/shubhayan.jpg",
     },
     {
       name: "Sarnick Chakraborty",
       role: "Backend Developer",
       imageUrl:
-        "../../public/images/about/myimage.jpg",
+        "../assets/about/myimage.jpg",
     },
     {
       name: "Subhakash Paul",
       role: "Design Lead",
       imageUrl:
-        "../../public/images/about/subhakash.jpg",
+        "../assets/about/subhakash.jpg",
     },
   ];
 
