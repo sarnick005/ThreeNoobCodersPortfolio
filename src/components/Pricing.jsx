@@ -17,7 +17,7 @@ const Pricing = ({ pricingData, selectedService }) => {
           <h2 className="text-4xl font-bold text-gray-900 sm:text-5xl">
             Pricing Plans
           </h2>
-          <p className="mt-4 max-w-2xl mx-auto text-xl text-gray-600">
+          <p className="mt-4 max-w-2xl mx-auto text-2xl text-gray-700">
             {selectedService
               ? `Pricing for ${selectedService}`
               : "Find the perfect plan for your needs and budget."}
@@ -81,7 +81,7 @@ const Pricing = ({ pricingData, selectedService }) => {
                           d="M5 13l4 4L19 7"
                         />
                       </svg>
-                      <span className="ml-2 text-base text-gray-700">
+                      <span className="ml-2 text-lg text-gray-700 ">
                         {feature}
                       </span>
                     </motion.li>

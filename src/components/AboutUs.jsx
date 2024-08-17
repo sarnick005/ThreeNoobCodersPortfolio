@@ -29,19 +29,19 @@ const AboutUs = () => {
   const team = [
     {
       name: "Shubhayan Bagchi",
-      role: "CSE undergrad",
+      role: "Frontend Developer",
       imageUrl:
         "https://media.licdn.com/dms/image/v2/D4D03AQEFHOZ7bFrqpw/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1692103718093?e=1729123200&v=beta&t=5tthvOZ1PWTc-nK4_weoPmrKIDtWcRfTV64SFpn1cXE",
     },
     {
       name: "Sarnick Chakraborty",
-      role: "CSE undergrad",
+      role: "Backend Developer",
       imageUrl:
         "https://media.licdn.com/dms/image/v2/D4D03AQGd8nqtkhYXTA/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1722316313540?e=1729123200&v=beta&t=BGDKGcD7Gk1okDlnUXQpswomkoznodzVrXJT6ULy6EE",
     },
     {
       name: "Subhakash Paul",
-      role: "CSE undergrad",
+      role: "Design Lead",
       imageUrl:
         "https://media.licdn.com/dms/image/v2/D4D03AQFU4SQgwCNakQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1684912920202?e=1729123200&v=beta&t=HRBZiuTPbVYTfRkAor8pJeMiXBN4CwIE_GCvPaxR1Hk",
     },

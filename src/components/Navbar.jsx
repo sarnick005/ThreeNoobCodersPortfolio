@@ -4,7 +4,7 @@ import logo from "../assets/logo.png"; // Adjust the path if needed
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
-  const [isOpen, setIsOpen] = useState(false); // State to handle mobile menu visibility
+  const [isOpen, setIsOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -13,6 +13,14 @@ const Navbar = () => {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  const navItems = [
+    "Projects",
+    "Services",
+    "Pricing",
+    "About Us",
+    "Contact Us",
+  ];
 
   return (
     <motion.nav
@@ -25,39 +33,37 @@ const Navbar = () => {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16 items-center">
-          <div className="flex-shrink-0 ml-10">
+          <div className="flex-shrink-0">
             <img
               src={logo}
               alt="Company Logo"
-              className="h-20 w-auto object-contain mt-4 mb-4"
-              style={{ backgroundColor: "transparent" }}
+              className="h-16 w-auto object-contain sm:h-16 md:h-20"
             />
           </div>
-          {/* Desktop Menu */}
-          <div className="hidden sm:flex sm:space-x-8 mt-3">
-            {["Projects", "Services", "Pricing", "About Us", "Contact Us"].map(
-              (item) => (
-                <motion.a
-                  key={item}
-                  href={`#${item.toLowerCase().replace(/\s+/g, "-")}`}
-                  className={`${
-                    scrolled
-                      ? "text-gray-500 hover:text-gray-900"
-                      : "text-white hover:text-gray-200"
-                  } px-3 py-2 rounded-md font-large text-xl`}
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                >
-                  {item}
-                </motion.a>
-              )
-            )}
+          {/* Desktop and Tablet Menu */}
+          <div className="hidden md:flex md:space-x-4 lg:space-x-8">
+            {navItems.map((item) => (
+              <motion.a
+                key={item}
+                href={`#${item.toLowerCase().replace(/\s+/g, "-")}`}
+                className={`${
+                  scrolled
+                    ? "text-gray-500 hover:text-gray-900"
+                    : "text-white hover:text-gray-200"
+                } px-2 py-2 rounded-md text-sm lg:text-base xl:text-lg`}
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                {item}
+              </motion.a>
+            ))}
           </div>
           {/* Mobile Menu Button */}
-          <div className="sm:hidden flex items-center">
+          <div className="md:hidden flex items-center">
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="text-gray-500 hover:text-gray-700 focus:outline-none"
+              className={`${scrolled ? "text-gray-500" : "text-white"}`}
+              aria-label="Toggle menu"
             >
               <svg
                 className="w-6 h-6"
@@ -76,16 +82,25 @@ const Navbar = () => {
             </button>
           </div>
         </div>
-        {/* Mobile Menu */}
-        <div
-          className={`fixed inset-0 bg-white z-20 transform transition-transform duration-300 ${
-            isOpen ? "translate-x-0" : "translate-x-full"
-          } sm:hidden`}
-        >
-          <div className="flex justify-end p-4">
+      </div>
+      {/* Mobile Menu */}
+      <motion.div
+        className={`fixed inset-0 bg-white z-20 md:hidden`}
+        initial={{ x: "100%" }}
+        animate={{ x: isOpen ? "0%" : "100%" }}
+        transition={{ duration: 0.3 }}
+      >
+        <div className="flex flex-col h-full">
+          <div className="flex justify-between items-center p-4 border-b">
+            <img
+              src={logo}
+              alt="Company Logo"
+              className="h-16 w-auto object-contain"
+            />
             <button
               onClick={() => setIsOpen(false)}
               className="text-gray-500 hover:text-gray-700"
+              aria-label="Close menu"
             >
               <svg
                 className="w-6 h-6"
@@ -103,24 +118,22 @@ const Navbar = () => {
               </svg>
             </button>
           </div>
-          <div className="flex flex-col items-center space-y-6 mt-8">
-            {["Projects", "Services", "Pricing", "About Us", "Contact Us"].map(
-              (item) => (
-                <motion.a
-                  key={item}
-                  href={`#${item.toLowerCase().replace(/\s+/g, "-")}`}
-                  className="text-gray-800 hover:text-gray-600 text-2xl"
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                  onClick={() => setIsOpen(false)} // Close the menu on item click
-                >
-                  {item}
-                </motion.a>
-              )
-            )}
+          <div className="flex flex-col items-center justify-center flex-grow space-y-6">
+            {navItems.map((item) => (
+              <motion.a
+                key={item}
+                href={`#${item.toLowerCase().replace(/\s+/g, "-")}`}
+                className="text-gray-800 hover:text-gray-600 text-xl"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                onClick={() => setIsOpen(false)}
+              >
+                {item}
+              </motion.a>
+            ))}
           </div>
         </div>
-      </div>
+      </motion.div>
     </motion.nav>
   );
 };

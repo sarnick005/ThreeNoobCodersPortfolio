@@ -7,7 +7,8 @@ import {
   AboutUs,
   ContactUs,
   FAQAccordion,
-  ScrollToTop
+  ScrollToTop,
+  TechStack
 } from "./components";
 import Services from "./components/Services";
 import Pricing from "./components/Pricing";
@@ -39,7 +40,7 @@ function App() {
     if (selectedService && pricingData[selectedService]) {
       return pricingData[selectedService];
     }
-    return pricingData["Web Development"] || [];
+    return pricingData["Basic Website"] || [];
   };
 
   return (
@@ -58,6 +59,7 @@ function App() {
         />
 
         <AboutUs />
+        <TechStack/>
         <FAQAccordion/>
         <ContactUs />
         <Footer />

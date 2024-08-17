@@ -8,6 +8,7 @@ import AboutUs from "./AboutUs";
 import ContactUs from "./ContactUs";
 import FAQAccordion from "./FAQAccordion";
 import ScrollToTop from "./ScrollToTop"
+import TechStack from "./TechStack";
 
 export {
   Navbar,
@@ -19,5 +20,6 @@ export {
   AboutUs,
   ContactUs,
   FAQAccordion,
-  ScrollToTop
+  ScrollToTop,
+  TechStack
 };

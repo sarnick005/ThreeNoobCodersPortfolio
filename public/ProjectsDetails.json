@@ -22,12 +22,12 @@
     "title": "AI-Powered Chatbot",
     "description": "Customer service bot with natural language processing capabilities. This advanced chatbot utilizes machine learning algorithms to understand and respond to customer queries in a human-like manner. It can handle multiple languages, learn from interactions to improve its responses over time, and seamlessly escalate complex issues to human agents when necessary. The chatbot integrates with various platforms including websites, messaging apps, and social media.",
     "imageUrls": [
-       "../src/assets/v1.jpeg",
-      "../src/assets/v2.png",
-      "../src/assets/v3.jpeg",
-      "../src/assets/v4.jpeg",
-      "../src/assets/v5.jpeg",
-      "../src/assets/v6.jpeg"
+       "./images/projects/v1.jpeg",
+      "./images/projects/v2.png",
+      "./images/projects/v3.jpeg",
+      "./images/projects/v4.jpeg",
+      "./images/projects/v5.jpeg",
+      "./images/projects/v6.jpeg"
     ],
     "liveDemo": "https://ai-chatbot-demo.example.com"
   },
