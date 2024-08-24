@@ -21,7 +21,6 @@ const ServiceCard = ({ title, index, isSelected, onClick }) => (
 const Services = ({ onSelectService }) => {
   const services = ["Fullstack Webapp", "Basic Website", "Figma to Web"];
 
- 
   const [selectedService, setSelectedService] = useState("Basic Website");
 
   const handleSelectService = (service) => {
@@ -41,7 +40,7 @@ const Services = ({ onSelectService }) => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
         >
-          <h2 className="text-3xl font-extrabold text-gray-900 sm:text-4xl mt-8">
+          <h2 className="text-3xl font-extrabold text-gray-900 sm:text-4xl ">
             Our Services
           </h2>
           <p className="mt-3 text-2xl text-gray-700 max-w-2xl mx-auto 0 sm:mt-4">

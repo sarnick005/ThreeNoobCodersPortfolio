@@ -3,70 +3,43 @@ import { motion } from "framer-motion";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 
-const Slide = ({ url, containerDimensions }) => {
-  const [imageDimensions, setImageDimensions] = useState({
-    width: 0,
-    height: 0,
-  });
+const Slide = ({ url, containerDimensions, description }) => {
+  const [hovered, setHovered] = useState(false);
   const imageRef = useRef(null);
 
-  useEffect(() => {
-    const updateImageDimensions = () => {
-      if (
-        imageRef.current &&
-        containerDimensions.width &&
-        containerDimensions.height
-      ) {
-        const img = imageRef.current;
-        const imgAspectRatio = img.naturalWidth / img.naturalHeight;
-        const containerAspectRatio =
-          containerDimensions.width / containerDimensions.height;
-
-        let newWidth, newHeight;
-
-        if (imgAspectRatio > containerAspectRatio) {
-          newWidth = containerDimensions.width;
-          newHeight = containerDimensions.width / imgAspectRatio;
-        } else {
-          newHeight = containerDimensions.height;
-          newWidth = containerDimensions.height * imgAspectRatio;
-        }
-
-        setImageDimensions({ width: newWidth, height: newHeight });
-      }
-    };
-
-    updateImageDimensions();
-    window.addEventListener("resize", updateImageDimensions);
-    return () => window.removeEventListener("resize", updateImageDimensions);
-  }, [containerDimensions]);
-
   return (
-    <div
-      className="slide-container bg-gradient-to-br from-gray-50 to-gray-100"
+    <motion.div
+      className="slide-container relative flex justify-center items-center"
       style={{
         width: containerDimensions.width,
         height: containerDimensions.height,
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
       }}
+      onMouseEnter={() => setHovered(true)}
+      onMouseLeave={() => setHovered(false)}
+      initial={{ opacity: 0.9 }}
+      whileHover={{ opacity: 1 }}
+      transition={{ duration: 0.3 }}
     >
       <img
         ref={imageRef}
         src={url}
         alt="Project"
-        className="slide"
-        style={{
-          width: `${imageDimensions.width}px`,
-          height: `${imageDimensions.height}px`,
-          objectFit: "contain",
-        }}
+        className="w-full h-full object-cover"
       />
-    </div>
+      {hovered && (
+        <motion.div
+          className="absolute inset-0 bg-black bg-opacity-50 flex justify-center items-center"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.3 }}
+        >
+          <p className="text-white text-sm sm:text-lg px-4 text-center">
+            {description}
+          </p>
+        </motion.div>
+      )}
+    </motion.div>
   );
 };
 
@@ -75,14 +48,14 @@ const ProjectCard = ({ title, description, imageUrls, index, liveDemo }) => {
     width: 0,
     height: 0,
   });
-  const sliderRef = useRef(null);
+  const [hovered, setHovered] = useState(false);
   const containerRef = useRef(null);
 
   useEffect(() => {
     const updateDimensions = () => {
       if (containerRef.current) {
         const containerWidth = containerRef.current.offsetWidth;
-        const containerHeight = containerRef.current.offsetHeight;
+        const containerHeight = containerWidth * 0.5625; // 16:9 aspect ratio
         setContainerDimensions({
           width: containerWidth,
           height: containerHeight,
@@ -101,46 +74,52 @@ const ProjectCard = ({ title, description, imageUrls, index, liveDemo }) => {
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 3000,
     adaptiveHeight: false,
+    pauseOnHover: true,
+    arrows: false,
   };
 
   return (
     <motion.div
-      className={`flex flex-col lg:flex-row rounded-lg shadow-lg overflow-hidden ${
-        index % 2 === 0 ? "lg:flex-row-reverse" : ""
-      }`}
+      className="rounded-lg shadow-lg overflow-hidden w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-2xl mx-auto"
       initial={{ opacity: 0, y: 50 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5, delay: index * 0.1 }}
+      style={{ marginBottom: "20px" }}
+      onMouseEnter={() => setHovered(true)}
+      onMouseLeave={() => setHovered(false)}
     >
       <div
         ref={containerRef}
-        className="bg-gradient-to-br from-gray-50 to-gray-100 flex-shrink-0 w-full lg:w-1/2 overflow-hidden relative"
-        style={{ height: "300px" }}
+        className="flex-shrink-0 w-full overflow-hidden relative"
       >
-        <Slider ref={sliderRef} {...settings}>
+        <Slider {...settings}>
           {imageUrls.map((url, i) => (
             <Slide
               key={i}
               url={url}
               containerDimensions={containerDimensions}
+              description={description}
             />
           ))}
         </Slider>
-        <a
-          href={liveDemo}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="absolute top-4 right-4 bg-white rounded-full p-2 shadow-md hover:bg-gray-100 transition-colors duration-200"
-        >
-          <FontAwesomeIcon icon={faArrowRight} className="text-gray-600" />
-        </a>
+        {hovered && (
+          <a
+            href={liveDemo}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="absolute bottom-4 right-4 bg-white text-black rounded-full p-2 shadow-md hover:bg-gray-100 transition-colors duration-200 flex items-center"
+          >
+            <span className="text-sm font-semibold">Live Demo</span>
+          </a>
+        )}
       </div>
-      <div className="flex-1 p-6 flex flex-col justify-between lg:w-1/2 ">
-        <div className="flex-1 ">
-          <h2 className="text-3xl font-semibold text-gray-900">{title}</h2>
-          <h4 className="mt-3 text-xl  text-gray-500">{description}</h4>
-        </div>
+      <div className="p-4">
+        <h2 className="text-lg sm:text-xl font-semibold text-gray-900">
+          {title}
+        </h2>
       </div>
     </motion.div>
   );
