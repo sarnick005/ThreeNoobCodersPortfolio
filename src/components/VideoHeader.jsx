@@ -1,6 +1,10 @@
 import React from "react";
 import { motion, useTransform, useViewportScroll } from "framer-motion";
-import bgImg from "../assets/bg-img.jpg"; // Ensure this path is correct
+// import bgImg from "../assets/background gray aesthetic.jpg"; // Ensure this path is correct
+// import bgImg from "../assets/Blue wallpaper.jpg"; 
+import bgImg from "../assets/Gray Wallpaper __ Shades.jpg"; 
+// import bgImg from "../assets/light & dark grey wallpaper.jpg"; 
+// import bgImg from "../assets/background gray aesthetic.jpg"; 
 
 const VideoHeader = () => {
   const { scrollY } = useViewportScroll();
@@ -17,7 +21,7 @@ const VideoHeader = () => {
         />
       </motion.div>
       {/* Overlay */}
-      <div className="absolute inset-0 bg-gray-900 bg-opacity-50" />
+      
       {/* Content */}
       <div className="relative max-w-7xl mx-auto py-24 px-4 sm:py-32 sm:px-6 lg:px-8 h-full flex flex-col justify-center">
         <motion.h1
