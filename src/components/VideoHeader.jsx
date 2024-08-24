@@ -2,7 +2,7 @@ import React from "react";
 import { motion, useTransform, useViewportScroll } from "framer-motion";
 // import bgImg from "../assets/background gray aesthetic.jpg"; // Ensure this path is correct
 // import bgImg from "../assets/Blue wallpaper.jpg"; 
-import bgImg from "../assets/Gray Wallpaper __ Shades.jpg"; 
+import bgImg from "../assets/bg-img.jpg"; 
 // import bgImg from "../assets/light & dark grey wallpaper.jpg"; 
 // import bgImg from "../assets/background gray aesthetic.jpg"; 
 

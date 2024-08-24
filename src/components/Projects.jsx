@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import ProjectCard from "./ProjectCard"; // Adjust the import path as needed
 import { motion } from "framer-motion";
+
 const Projects = () => {
   const [projects, setProjects] = useState([]);
   const [hoveredIndex, setHoveredIndex] = useState(null);
@@ -28,134 +29,27 @@ const Projects = () => {
             Showcasing our latest and greatest work
           </p>
         </motion.div>
-        <div className="mt-12 grid gap-5 max-w-lg mx-auto lg:grid-cols-1 lg:max-w-none text-2xl">
+        <div className="mt-12 grid gap-8 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2">
           {projects.map((project, index) => (
-            <ProjectCard key={index} {...project} index={index} />
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.4, delay: index * 0.2 }}
+              className={`transition duration-300 ${
+                hoveredIndex !== null && hoveredIndex !== index
+                  ? "filter blur-sm"
+                  : "filter blur-none"
+              }`}
+              onMouseEnter={() => setHoveredIndex(index)}
+              onMouseLeave={() => setHoveredIndex(null)}
+            >
+              <ProjectCard {...project} index={index} />
+            </motion.div>
           ))}
         </div>
       </div>
     </section>
-  );
-};
-
-const ProjectCard = ({ project, index }) => {
-  const controls = useAnimation();
-  const [ref, inView] = useInView({
-    triggerOnce: false,
-    threshold: 0.1,
-  });
-  const [currentImageIndex, setCurrentImageIndex] = useState(0);
-
-  useEffect(() => {
-    if (inView) {
-      controls.start("visible");
-    } else {
-      controls.start("hidden");
-    }
-  }, [controls, inView]);
-
-  const variants = {
-    visible: {
-      opacity: 1,
-      x: 0,
-      transition: { duration: 0.5 },
-    },
-    hidden: {
-      opacity: 0,
-      x: index % 2 === 0 ? -50 : 50,
-    },
-  };
-
-  const nextImage = () => {
-    setCurrentImageIndex((prevIndex) =>
-      prevIndex === project.imageUrls.length - 1 ? 0 : prevIndex + 1
-    );
-  };
-
-  const prevImage = () => {
-    setCurrentImageIndex((prevIndex) =>
-      prevIndex === 0 ? project.imageUrls.length - 1 : prevIndex - 1
-    );
-  };
-
-  const ImageSection = () => (
-    <motion.div className="w-1/2" variants={variants}>
-      <div className="relative w-full h-64 overflow-hidden rounded-lg shadow-lg">
-        {project.imageUrls && project.imageUrls.length > 0 ? (
-          <>
-            <img
-              src={project.imageUrls[currentImageIndex]}
-              alt={`${project.title} - Image ${currentImageIndex + 1}`}
-              className="absolute inset-0 w-full h-full object-cover"
-              onError={(e) => {
-                e.target.src = "/api/placeholder/400/320";
-                e.target.alt = "Placeholder image";
-              }}
-            />
-            {/* Navigation Buttons */}
-            <button
-              onClick={prevImage}
-              className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white p-2 rounded-full"
-            >
-              &#10094;
-            </button>
-            <button
-              onClick={nextImage}
-              className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white p-2 rounded-full"
-            >
-              &#10095;
-            </button>
-          </>
-        ) : (
-          <img
-            src="/api/placeholder/400/320"
-            alt="Placeholder image"
-            className="absolute inset-0 w-full h-full object-cover"
-          />
-        )}
-      </div>
-    </motion.div>
-  );
-
-  const DescriptionSection = () => (
-    <motion.div
-      className="w-1/2 flex flex-col justify-center px-6"
-      variants={variants}
-    >
-      <h3 className="text-2xl font-bold text-gray-900 mb-4">{project.title}</h3>
-      <p className="text-gray-600 mb-4">{project.description}</p>
-      {project.liveDemo && (
-        <a
-          href={project.liveDemo}
-          className="text-blue-600 hover:underline"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          View Live Demo
-        </a>
-      )}
-    </motion.div>
-  );
-
-  return (
-    <motion.div
-      ref={ref}
-      animate={controls}
-      initial="hidden"
-      className="flex items-center"
-    >
-      {index % 2 === 0 ? (
-        <>
-          <ImageSection />
-          <DescriptionSection />
-        </>
-      ) : (
-        <>
-          <DescriptionSection />
-          <ImageSection />
-        </>
-      )}
-    </motion.div>
   );
 };
 
