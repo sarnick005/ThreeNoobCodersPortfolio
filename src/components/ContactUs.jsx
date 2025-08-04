@@ -1,16 +1,18 @@
-import React from "react";
 import { motion } from "framer-motion";
-import { Instagram,Twitter,X, Mail, Video, Linkedin } from "lucide-react";
+import { Mail, Linkedin } from "lucide-react";
+import { FaXTwitter } from "react-icons/fa6";
+import { FaInstagram } from "react-icons/fa";
 
-
-const AnimatedIcon = ({ icon: Icon, href }) => (
+const AnimatedIcon = ({ icon: Icon, href, label }) => (
   <motion.a
     href={href}
     className="text-gray-400 hover:text-gray-500"
     whileHover={{ scale: 1.2, rotate: 5 }}
     whileTap={{ scale: 0.9 }}
+    target="_blank"
+    rel="noopener noreferrer"
   >
-    <span className="sr-only">{Icon.name}</span>
+    <span className="sr-only">{label}</span>
     <Icon className="h-8 w-8" />
   </motion.a>
 );
@@ -44,10 +46,26 @@ const ContactUs = () => {
           animate={{ opacity: 1 }}
           transition={{ duration: 0.5, delay: 0.2 }}
         >
-          <AnimatedIcon icon={Instagram} href="https://x.com/ThreeNoobCoders" />
-          <AnimatedIcon icon={Mail} href="mailto:threenoobcoders@gmail.com" />
-          <AnimatedIcon icon={Twitter} href="https://x.com/ThreeNoobCoders" />
-          <AnimatedIcon icon={Linkedin} href="https://x.com/ThreeNoobCoders" />
+          <AnimatedIcon
+            icon={FaInstagram}
+            href="https://instagram.com/ThreeNoobCoders"
+            label="Instagram"
+          />
+          <AnimatedIcon
+            icon={Mail}
+            href="mailto:threenoobcoders@gmail.com"
+            label="Email"
+          />
+          <AnimatedIcon
+            icon={FaXTwitter}
+            href="https://x.com/ThreeNoobCoders"
+            label="Twitter"
+          />
+          <AnimatedIcon
+            icon={Linkedin}
+            href="https://www.linkedin.com/in/three-noob-coders-990538324/"
+            label="LinkedIn"
+          />
         </motion.div>
       </div>
     </motion.section>
