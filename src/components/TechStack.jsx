@@ -36,6 +36,7 @@ import {
   SiVercel,
   SiNetlify,
   SiRazorpay,
+  SiFastapi,
 } from "react-icons/si";
 
 const TechIcon = ({ Icon, name, color }) => (
@@ -45,7 +46,9 @@ const TechIcon = ({ Icon, name, color }) => (
     whileTap={{ scale: 0.95 }}
   >
     <Icon className={`w-10 h-10 ${color}`} />
-    <span className="mt-1 text-xs font-medium text-center leading-tight">{name}</span>
+    <span className="mt-1 text-xs font-medium text-center leading-tight">
+      {name}
+    </span>
   </motion.div>
 );
 
@@ -86,7 +89,9 @@ function TechStack() {
     { Icon: FaNodeJs, name: "Node.js", color: "text-green-600" },
     { Icon: SiExpress, name: "Express.js", color: "text-gray-700" },
     { Icon: SiFlask, name: "Flask", color: "text-gray-800" },
+    { Icon: SiFastapi, name: "FastAPI", color: "text-green-700" },
     { Icon: SiPython, name: "Python", color: "text-blue-500" },
+    { Icon: SiTypescript, name: "TypeScript", color: "text-blue-700" },
     { Icon: SiJavascript, name: "JavaScript", color: "text-yellow-500" },
     { Icon: SiJsonwebtokens, name: "JWT", color: "text-purple-600" },
     { Icon: SiSocketdotio, name: "Socket.io", color: "text-gray-900" },

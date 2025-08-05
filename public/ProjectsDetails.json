@@ -1,12 +1,14 @@
 [
   {
-    "title": "E-commerce Platform",
-    "description": "A fully responsive online store with integrated payment systems. This platform offers a seamless shopping experience across devices, featuring a user-friendly interface, secure checkout process, and real-time inventory management. It supports multiple payment gateways, includes a robust product search and filter system, and provides detailed analytics for store owners.",
+    "title": "Edu Platform",
+    "description": "A modern and fully responsive e-learning platform designed for seamless cross-device experiences. Edu Platform features secure multi-gateway payment integration, intuitive course browsing, and real-time inventory management. It includes advanced search and filtering functionality, and offers detailed analytics for administrators through a powerful dashboard.",
     "imageUrls": [
-      "https://i.pinimg.com/736x/5b/4f/54/5b4f54704ecc5aef7c80aa54ca265ffa.jpg",
-      "https://i.pinimg.com/564x/33/ea/5a/33ea5ac772e3f04e1fd5918c16c4490d.jpg"
+      "./images/projects/edu1.png",
+      "./images/projects/edu2.png",
+      "./images/projects/edu3.png",
+      "./images/projects/edu4.png"
     ],
-    "liveDemo": "https://ecommerce-platform-demo.example.com"
+    "liveDemo": "https://brooks-widespread-rangers-owns.trycloudflare.com/"
   },
   {
     "title": "IoT Dashboard",
@@ -22,7 +24,7 @@
     "title": "AI-Powered Chatbot",
     "description": "Customer service bot with natural language processing capabilities. This advanced chatbot utilizes machine learning algorithms to understand and respond to customer queries in a human-like manner. It can handle multiple languages, learn from interactions to improve its responses over time, and seamlessly escalate complex issues to human agents when necessary. The chatbot integrates with various platforms including websites, messaging apps, and social media.",
     "imageUrls": [
-       "./images/projects/v1.jpeg",
+      "./images/projects/v1.jpeg",
       "./images/projects/v2.png",
       "./images/projects/v3.jpeg",
       "./images/projects/v4.jpeg",

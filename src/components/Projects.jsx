@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import ProjectCard from "./ProjectCard"; // Adjust the import path as needed
+import ProjectCard from "./ProjectCard";
 import { motion } from "framer-motion";
 
 const Projects = () => {
@@ -14,8 +14,8 @@ const Projects = () => {
   }, []);
 
   return (
-    <section id="projects" className="py-12 sm:py-16 lg:py-20">
-      <div className="bg-gradient-to-br from-gray-50 to-gray-100 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 overflow-hidden">
+    <section id="projects" className="py-16 sm:py-20 lg:py-28 bg-gradient-to-br from-gray-50 to-gray-100">
+      <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-16 xl:px-24">
         <motion.div
           className="text-center"
           initial={{ opacity: 0, y: 20 }}
@@ -29,11 +29,12 @@ const Projects = () => {
             Showcasing our latest and greatest work
           </p>
         </motion.div>
-        <div className="mt-12 grid gap-8 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2">
+
+        <div className="mt-16 grid gap-10 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2">
           {projects.map((project, index) => (
             <motion.div
               key={index}
-              initial={{ opacity: 0, scale: 0.9 }}
+              initial={{ opacity: 0, scale: 0.95 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.4, delay: index * 0.2 }}
               className={`transition duration-300 ${

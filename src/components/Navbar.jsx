@@ -5,22 +5,63 @@ import logo from "../assets/logo.png"; // Adjust the path if needed
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
+  const [activeSection, setActiveSection] = useState("");
+
+  const navItems = [
+    { name: "Projects", id: "projects" },
+    { name: "Services", id: "services" },
+    { name: "Pricing", id: "pricing" },
+    { name: "About Us", id: "about-us" },
+    { name: "Contact Us", id: "contact-us" },
+  ];
 
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 50);
+
+      // Get all sections
+      const sections = navItems.map(item => ({
+        id: item.id,
+        element: document.getElementById(item.id)
+      })).filter(section => section.element);
+
+      // Find which section is currently in view
+      const scrollPosition = window.scrollY + 100; // Offset for navbar height
+
+      let currentSection = "";
+      
+      for (let i = sections.length - 1; i >= 0; i--) {
+        const section = sections[i];
+        const sectionTop = section.element.offsetTop;
+        
+        if (scrollPosition >= sectionTop) {
+          currentSection = section.id;
+          break;
+        }
+      }
+
+      setActiveSection(currentSection);
     };
+
     window.addEventListener("scroll", handleScroll);
+    handleScroll(); // Call once to set initial state
+    
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const navItems = [
-    "Projects",
-    "Services",
-    "Pricing",
-    "About Us",
-    "Contact Us",
-  ];
+  const handleNavClick = (id) => {
+    const element = document.getElementById(id);
+    if (element) {
+      const navbarHeight = 80; // Adjust based on your navbar height
+      const elementPosition = element.offsetTop - navbarHeight;
+      
+      window.scrollTo({
+        top: elementPosition,
+        behavior: "smooth"
+      });
+    }
+    setIsOpen(false); // Close mobile menu if open
+  };
 
   return (
     <motion.nav
@@ -42,21 +83,28 @@ const Navbar = () => {
           </div>
           {/* Desktop and Tablet Menu */}
           <div className="hidden md:flex md:space-x-4 lg:space-x-8">
-            {navItems.map((item) => (
-              <motion.a
-                key={item}
-                href={`#${item.toLowerCase().replace(/\s+/g, "-")}`}
-                className={`${
-                  scrolled
-                    ? "text-gray-500 hover:text-gray-900"
-                    : "text-white hover:text-gray-200"
-                } px-2 py-2 rounded-md text-sm lg:text-base xl:text-lg`}
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-              >
-                {item}
-              </motion.a>
-            ))}
+            {navItems.map((item) => {
+              const isActive = activeSection === item.id;
+              return (
+                <motion.button
+                  key={item.name}
+                  onClick={() => handleNavClick(item.id)}
+                  className={`${
+                    scrolled
+                      ? isActive
+                        ? "text-black border-b-2 border-gray-800"
+                        : "text-gray-500 hover:text-gray-900"
+                      : isActive
+                      ? "text-gray-200 border-b-2 border-gray-200"
+                      : "text-white hover:text-gray-200"
+                  } px-2 py-2 rounded-md text-sm lg:text-base xl:text-lg transition-all duration-300`}
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                >
+                  {item.name}
+                </motion.button>
+              );
+            })}
           </div>
           {/* Mobile Menu Button */}
           <div className="md:hidden flex items-center">
@@ -119,18 +167,24 @@ const Navbar = () => {
             </button>
           </div>
           <div className="flex flex-col items-center justify-center flex-grow space-y-6">
-            {navItems.map((item) => (
-              <motion.a
-                key={item}
-                href={`#${item.toLowerCase().replace(/\s+/g, "-")}`}
-                className="text-gray-800 hover:text-gray-600 text-xl"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                onClick={() => setIsOpen(false)}
-              >
-                {item}
-              </motion.a>
-            ))}
+            {navItems.map((item) => {
+              const isActive = activeSection === item.id;
+              return (
+                <motion.button
+                  key={item.name}
+                  onClick={() => handleNavClick(item.id)}
+                  className={`${
+                    isActive
+                      ? "text-black font-semibold"
+                      : "text-gray-800 hover:text-gray-600"
+                  } text-xl transition-all duration-300`}
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                >
+                  {item.name}
+                </motion.button>
+              );
+            })}
           </div>
         </div>
       </motion.div>
