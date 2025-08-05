@@ -42,5 +42,35 @@
       "https://i.pinimg.com/736x/5b/4f/54/5b4f54704ecc5aef7c80aa54ca265ffa.jpg"
     ],
     "liveDemo": "https://social-media-demo.example.com"
+  },
+    {
+    "title": "Social Media Platform",
+    "description": "A platform for users to connect and share content. This innovative social network combines the best features of existing platforms with unique elements. It offers customizable feeds, advanced privacy controls, and a built-in content creation suite. Users can join interest-based communities, participate in live discussions, and even monetize their content through an integrated marketplace. The platform also includes robust anti-harassment tools and promotes positive digital well-being.",
+    "imageUrls": [
+      "https://i.pinimg.com/564x/58/7f/af/587faf465b70ce9cd2dad618dbebf929.jpg",
+      "https://i.pinimg.com/564x/f9/a9/66/f9a966185316271eaf5fde972e2ccff7.jpg",
+      "https://i.pinimg.com/736x/5b/4f/54/5b4f54704ecc5aef7c80aa54ca265ffa.jpg"
+    ],
+    "liveDemo": "https://social-media-demo.example.com"
+  },
+    {
+    "title": "Social Media Platform",
+    "description": "A platform for users to connect and share content. This innovative social network combines the best features of existing platforms with unique elements. It offers customizable feeds, advanced privacy controls, and a built-in content creation suite. Users can join interest-based communities, participate in live discussions, and even monetize their content through an integrated marketplace. The platform also includes robust anti-harassment tools and promotes positive digital well-being.",
+    "imageUrls": [
+      "https://i.pinimg.com/564x/58/7f/af/587faf465b70ce9cd2dad618dbebf929.jpg",
+      "https://i.pinimg.com/564x/f9/a9/66/f9a966185316271eaf5fde972e2ccff7.jpg",
+      "https://i.pinimg.com/736x/5b/4f/54/5b4f54704ecc5aef7c80aa54ca265ffa.jpg"
+    ],
+    "liveDemo": "https://social-media-demo.example.com"
+  },
+    {
+    "title": "Social Media Platform",
+    "description": "A platform for users to connect and share content. This innovative social network combines the best features of existing platforms with unique elements. It offers customizable feeds, advanced privacy controls, and a built-in content creation suite. Users can join interest-based communities, participate in live discussions, and even monetize their content through an integrated marketplace. The platform also includes robust anti-harassment tools and promotes positive digital well-being.",
+    "imageUrls": [
+      "https://i.pinimg.com/564x/58/7f/af/587faf465b70ce9cd2dad618dbebf929.jpg",
+      "https://i.pinimg.com/564x/f9/a9/66/f9a966185316271eaf5fde972e2ccff7.jpg",
+      "https://i.pinimg.com/736x/5b/4f/54/5b4f54704ecc5aef7c80aa54ca265ffa.jpg"
+    ],
+    "liveDemo": "https://social-media-demo.example.com"
   }
 ]
