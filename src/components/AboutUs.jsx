@@ -1,8 +1,9 @@
 import React from "react";
 import { motion } from "framer-motion";
 import shubhayan from "../assets/about/shubhayan.jpg";
-import sarnick from "../assets/about/myimage.jpg";
-import subhakash from "../assets/about/subhakash.jpg";
+import sarnick from "../assets/about/sarnick.jpg";
+import subhakash from "../assets/about/subhakash.png";
+import ricky from "../assets/about/ricky.jpg";
 
 const TeamMember = ({ name, role, imageUrl, index }) => (
   <motion.div
@@ -44,6 +45,12 @@ const AboutUs = () => {
       role: "Design Lead",
       imageUrl: subhakash,
     },
+    {
+      name: "Premjit Das",
+      role: "Design Lead",
+      imageUrl: ricky,
+    },
+    
   ];
 
   return (
@@ -72,7 +79,7 @@ const AboutUs = () => {
         {/* Team Grid */}
         <div className="flex justify-center mt-12">
           <motion.div
-            className="grid gap-10 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 max-w-6xl w-full"
+            className="grid gap-10 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 max-w-6xl w-full"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.5, delay: 0.2 }}

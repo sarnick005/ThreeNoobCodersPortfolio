@@ -8,7 +8,7 @@
       "./images/projects/edu3.png",
       "./images/projects/edu4.png"
     ],
-    "liveDemo": "https://brooks-widespread-rangers-owns.trycloudflare.com/"
+    "liveDemo": "https://template-projects-for-threenoobcode.vercel.app/edu/1"
   },
   {
     "title": "Business Landing Page",
@@ -19,7 +19,7 @@
       "./images/projects/b_land3.png",
       "./images/projects/b_land4.png"
     ],
-    "liveDemo": "https://kolkata-business-landing.example.com"
+    "liveDemo": "https://template-projects-for-threenoobcode.vercel.app/business-landing-page/1"
   },
   {
     "title": "AI-Powered Chatbot",
@@ -44,7 +44,7 @@
       "./images/projects/cafe4.png",
       "./images/projects/cafe5.png"
     ],
-    "liveDemo": "https://kolkata-cafe-demo.example.com"
+    "liveDemo": "https://template-projects-for-threenoobcode.vercel.app/cafe/1"
   },
 
   {
