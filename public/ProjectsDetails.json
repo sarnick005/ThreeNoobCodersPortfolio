@@ -1,28 +1,31 @@
 [
   {
-    "title": "E-commerce Platform",
-    "description": "A fully responsive online store with integrated payment systems. This platform offers a seamless shopping experience across devices, featuring a user-friendly interface, secure checkout process, and real-time inventory management. It supports multiple payment gateways, includes a robust product search and filter system, and provides detailed analytics for store owners.",
+    "title": "Edu Platform",
+    "description": "A modern and fully responsive e-learning platform designed for seamless cross-device experiences. Edu Platform features secure multi-gateway payment integration, intuitive course browsing, and real-time inventory management. It includes advanced search and filtering functionality, and offers detailed analytics for administrators through a powerful dashboard.",
     "imageUrls": [
-      "https://i.pinimg.com/736x/5b/4f/54/5b4f54704ecc5aef7c80aa54ca265ffa.jpg",
-      "https://i.pinimg.com/564x/33/ea/5a/33ea5ac772e3f04e1fd5918c16c4490d.jpg"
+      "./images/projects/edu1.png",
+      "./images/projects/edu2.png",
+      "./images/projects/edu3.png",
+      "./images/projects/edu4.png"
     ],
-    "liveDemo": "https://ecommerce-platform-demo.example.com"
+    "liveDemo": "https://template-projects-for-threenoobcode.vercel.app/edu/1"
   },
   {
-    "title": "IoT Dashboard",
-    "description": "Real-time monitoring system for smart home devices. This comprehensive dashboard provides users with instant updates on their connected devices, including thermostats, security cameras, and smart appliances. It features customizable widgets, alerts for unusual activity, and energy consumption reports. The interface is intuitive, allowing users to control their smart home ecosystem effortlessly from a single platform.",
+    "title": "Business Landing Page",
+    "description": "A sleek and modern landing page designed for businesses based in Kolkata. Tailored to reflect the vibrant commercial landscape of the city, this responsive page features dynamic content sections for services, testimonials, and local client highlights. Optimized for lead generation and SEO, it also includes integrated contact forms, Google Maps location, and visually appealing banners showcasing Kolkata’s business culture.",
     "imageUrls": [
-      "https://i.pinimg.com/564x/33/ea/5a/33ea5ac772e3f04e1fd5918c16c4490d.jpg",
-      "https://i.pinimg.com/564x/e2/4b/44/e24b44b443bd740b3a6d68d9309cb52c.jpg",
-      "https://i.pinimg.com/564x/c8/c9/02/c8c90231c9ccc4942c94474bd090a1de.jpg"
+      "./images/projects/b_land1.png",
+      "./images/projects/b_land2.png",
+      "./images/projects/b_land3.png",
+      "./images/projects/b_land4.png"
     ],
-    "liveDemo": "https://iot-dashboard-demo.example.com"
+    "liveDemo": "https://template-projects-for-threenoobcode.vercel.app/business-landing-page/1"
   },
   {
     "title": "AI-Powered Chatbot",
     "description": "Customer service bot with natural language processing capabilities. This advanced chatbot utilizes machine learning algorithms to understand and respond to customer queries in a human-like manner. It can handle multiple languages, learn from interactions to improve its responses over time, and seamlessly escalate complex issues to human agents when necessary. The chatbot integrates with various platforms including websites, messaging apps, and social media.",
     "imageUrls": [
-       "./images/projects/v1.jpeg",
+      "./images/projects/v1.jpeg",
       "./images/projects/v2.png",
       "./images/projects/v3.jpeg",
       "./images/projects/v4.jpeg",
@@ -30,6 +33,39 @@
       "./images/projects/v6.jpeg"
     ],
     "liveDemo": "https://ai-chatbot-demo.example.com"
+  },
+  {
+    "title": "Kolkata Nostalgic Cafe",
+    "description": "From the bustling lanes of Shyambazar to the elegant cafes of Park Street – this unique cafe website captures the soul of Kolkata. It's more than just a place to eat; it's where every conversation turns into an adda and every bite tells a story. Featuring a warm, vintage design blended with modern aesthetics, the platform showcases menu highlights, cultural stories, event announcements, and community reviews. Celebrate Kolkata’s rich heritage with every scroll. যেখানে প্রতিটি চুমুকে গল্প, প্রতিটি কামড়ে কলকাতার আত্মা।",
+    "imageUrls": [
+      "./images/projects/cafe1.png",
+      "./images/projects/cafe2.png",
+      "./images/projects/cafe3.png",
+      "./images/projects/cafe4.png",
+      "./images/projects/cafe5.png"
+    ],
+    "liveDemo": "https://template-projects-for-threenoobcode.vercel.app/cafe/1"
+  },
+
+  {
+    "title": "Social Media Platform",
+    "description": "A platform for users to connect and share content. This innovative social network combines the best features of existing platforms with unique elements. It offers customizable feeds, advanced privacy controls, and a built-in content creation suite. Users can join interest-based communities, participate in live discussions, and even monetize their content through an integrated marketplace. The platform also includes robust anti-harassment tools and promotes positive digital well-being.",
+    "imageUrls": [
+      "https://i.pinimg.com/564x/58/7f/af/587faf465b70ce9cd2dad618dbebf929.jpg",
+      "https://i.pinimg.com/564x/f9/a9/66/f9a966185316271eaf5fde972e2ccff7.jpg",
+      "https://i.pinimg.com/736x/5b/4f/54/5b4f54704ecc5aef7c80aa54ca265ffa.jpg"
+    ],
+    "liveDemo": "https://social-media-demo.example.com"
+  },
+  {
+    "title": "Social Media Platform",
+    "description": "A platform for users to connect and share content. This innovative social network combines the best features of existing platforms with unique elements. It offers customizable feeds, advanced privacy controls, and a built-in content creation suite. Users can join interest-based communities, participate in live discussions, and even monetize their content through an integrated marketplace. The platform also includes robust anti-harassment tools and promotes positive digital well-being.",
+    "imageUrls": [
+      "https://i.pinimg.com/564x/58/7f/af/587faf465b70ce9cd2dad618dbebf929.jpg",
+      "https://i.pinimg.com/564x/f9/a9/66/f9a966185316271eaf5fde972e2ccff7.jpg",
+      "https://i.pinimg.com/736x/5b/4f/54/5b4f54704ecc5aef7c80aa54ca265ffa.jpg"
+    ],
+    "liveDemo": "https://social-media-demo.example.com"
   },
   {
     "title": "Social Media Platform",

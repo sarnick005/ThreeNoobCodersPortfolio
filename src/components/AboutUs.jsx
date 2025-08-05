@@ -1,9 +1,9 @@
 import React from "react";
 import { motion } from "framer-motion";
-import shubhayan from "../assets/about/shubhayan.jpg"
-import sarnick from "../assets/about/myimage.jpg"
-import subhakash from "../assets/about/subhakash.jpg"
-
+import shubhayan from "../assets/about/shubhayan.jpg";
+import sarnick from "../assets/about/sarnick.jpg";
+import subhakash from "../assets/about/subhakash.png";
+import ricky from "../assets/about/ricky.jpg";
 
 const TeamMember = ({ name, role, imageUrl, index }) => (
   <motion.div
@@ -20,8 +20,8 @@ const TeamMember = ({ name, role, imageUrl, index }) => (
       transition={{ type: "spring", stiffness: 300 }}
     />
     <div className="space-y-2">
-      <div className="text-lg leading-6 font-medium space-y-1">
-        <h3 className="text-indigo-600">{name}</h3>
+      <div className="text-lg leading-6 font-medium space-y-1 text-center">
+        <h3 className="text-black">{name}</h3>
         <p className="text-gray-500">{role}</p>
       </div>
     </div>
@@ -33,21 +33,24 @@ const AboutUs = () => {
     {
       name: "Shubhayan Bagchi",
       role: "Frontend Developer",
-      imageUrl:
-        shubhayan,
+      imageUrl: shubhayan,
     },
     {
       name: "Sarnick Chakraborty",
       role: "Backend Developer",
-      imageUrl:
-        sarnick,
+      imageUrl: sarnick,
     },
     {
       name: "Subhakash Paul",
       role: "Design Lead",
-      imageUrl:
-        subhakash,
+      imageUrl: subhakash,
     },
+    {
+      name: "Premjit Das",
+      role: "Design Lead",
+      imageUrl: ricky,
+    },
+    
   ];
 
   return (
@@ -58,7 +61,7 @@ const AboutUs = () => {
       animate={{ opacity: 1 }}
       transition={{ duration: 0.5 }}
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-6 sm:px-12 lg:px-20">
         <motion.div
           className="text-center"
           initial={{ y: 20, opacity: 0 }}
@@ -72,16 +75,20 @@ const AboutUs = () => {
             Meet the team behind our success
           </p>
         </motion.div>
-        <motion.div
-          className="mt-12 max-w-lg mx-auto grid gap-5 lg:grid-cols-3 lg:max-w-none"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.5, delay: 0.2 }}
-        >
-          {team.map((member, index) => (
-            <TeamMember key={index} {...member} index={index} />
-          ))}
-        </motion.div>
+
+        {/* Team Grid */}
+        <div className="flex justify-center mt-12">
+          <motion.div
+            className="grid gap-10 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 max-w-6xl w-full"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+          >
+            {team.map((member, index) => (
+              <TeamMember key={index} {...member} index={index} />
+            ))}
+          </motion.div>
+        </div>
       </div>
     </motion.section>
   );

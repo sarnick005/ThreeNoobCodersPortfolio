@@ -6,11 +6,10 @@ import "slick-carousel/slick/slick-theme.css";
 
 const Slide = ({ url, containerDimensions, description }) => {
   const [hovered, setHovered] = useState(false);
-  const imageRef = useRef(null);
 
   return (
     <motion.div
-      className="slide-container relative flex justify-center items-center"
+      className="relative flex justify-center items-center"
       style={{
         width: containerDimensions.width,
         height: containerDimensions.height,
@@ -21,20 +20,15 @@ const Slide = ({ url, containerDimensions, description }) => {
       whileHover={{ opacity: 1 }}
       transition={{ duration: 0.3 }}
     >
-      <img
-        ref={imageRef}
-        src={url}
-        alt="Project"
-        className="w-full h-full object-cover"
-      />
+      <img src={url} alt="Project" className="w-full h-full object-cover" />
       {hovered && (
         <motion.div
-          className="absolute inset-0 bg-black bg-opacity-50 flex justify-center items-center"
+          className="absolute inset-0 bg-black bg-opacity-50 flex justify-center items-center px-4"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.3 }}
         >
-          <p className="text-white text-sm sm:text-lg px-4 text-center">
+          <p className="text-white text-center text-sm sm:text-lg">
             {description}
           </p>
         </motion.div>
@@ -43,7 +37,14 @@ const Slide = ({ url, containerDimensions, description }) => {
   );
 };
 
-const ProjectCard = ({ title, description, imageUrls, index, liveDemo }) => {
+const ProjectCard = ({
+  title,
+  description,
+  imageUrls,
+  index,
+  liveDemo,
+  isFeatured = false,
+}) => {
   const [containerDimensions, setContainerDimensions] = useState({
     width: 0,
     height: 0,
@@ -54,19 +55,16 @@ const ProjectCard = ({ title, description, imageUrls, index, liveDemo }) => {
   useEffect(() => {
     const updateDimensions = () => {
       if (containerRef.current) {
-        const containerWidth = containerRef.current.offsetWidth;
-        const containerHeight = containerWidth * 0.5625; // 16:9 aspect ratio
-        setContainerDimensions({
-          width: containerWidth,
-          height: containerHeight,
-        });
+        const width = containerRef.current.offsetWidth;
+        const height = isFeatured ? width * 0.6 : width * 0.5625;
+        setContainerDimensions({ width, height });
       }
     };
 
     updateDimensions();
     window.addEventListener("resize", updateDimensions);
     return () => window.removeEventListener("resize", updateDimensions);
-  }, []);
+  }, [isFeatured]);
 
   const settings = {
     dots: true,
@@ -83,18 +81,18 @@ const ProjectCard = ({ title, description, imageUrls, index, liveDemo }) => {
 
   return (
     <motion.div
-      className="rounded-lg shadow-lg overflow-hidden w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-2xl mx-auto"
+      className={`rounded-xl shadow-xl overflow-hidden relative transition-transform duration-300 hover:scale-[1.02] ${
+        isFeatured
+          ? "lg:row-span-2 lg:col-span-1 w-full h-full"
+          : "max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg"
+      } mx-auto`}
       initial={{ opacity: 0, y: 50 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5, delay: index * 0.1 }}
-      style={{ marginBottom: "20px" }}
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
     >
-      <div
-        ref={containerRef}
-        className="flex-shrink-0 w-full overflow-hidden relative"
-      >
+      <div ref={containerRef} className="relative w-full overflow-hidden">
         <Slider {...settings}>
           {imageUrls.map((url, i) => (
             <Slide
@@ -105,7 +103,8 @@ const ProjectCard = ({ title, description, imageUrls, index, liveDemo }) => {
             />
           ))}
         </Slider>
-        {hovered && (
+
+        {hovered && liveDemo && (
           <a
             href={liveDemo}
             target="_blank"
@@ -115,11 +114,25 @@ const ProjectCard = ({ title, description, imageUrls, index, liveDemo }) => {
             <span className="text-sm font-semibold">Live Demo</span>
           </a>
         )}
+
+        {isFeatured && (
+          <span className="absolute top-4 left-4 bg-black text-white text-xs font-semibold px-3 py-1 rounded-full shadow-lg">
+            Featured
+          </span>
+        )}
       </div>
-      <div className="p-4">
-        <h2 className="text-lg sm:text-xl font-semibold text-gray-900">
+
+      <div className="p-5">
+        <h2
+          className={`font-semibold text-gray-900 ${
+            isFeatured ? "text-2xl mb-2" : "text-lg sm:text-xl"
+          }`}
+        >
           {title}
         </h2>
+        {/* {isFeatured && (
+          <p className="text-gray-600 text-sm leading-relaxed">{description}</p>
+        )} */}
       </div>
     </motion.div>
   );

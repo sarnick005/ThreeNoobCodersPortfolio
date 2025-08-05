@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from "react";
-import ProjectCard from "./ProjectCard"; // Adjust the import path as needed
+import ProjectCard from "./ProjectCard";
 import { motion } from "framer-motion";
 
 const Projects = () => {
   const [projects, setProjects] = useState([]);
   const [hoveredIndex, setHoveredIndex] = useState(null);
+  const [showAll, setShowAll] = useState(false);
 
   useEffect(() => {
     fetch("/ProjectsDetails.json")
@@ -13,9 +14,19 @@ const Projects = () => {
       .catch((error) => console.error("Error fetching data:", error));
   }, []);
 
+  if (!projects.length) return null;
+
+  const featuredProject = projects[0];
+  const restProjects = projects.slice(1);
+  const visibleProjects = showAll ? restProjects : restProjects.slice(0, 2);
+
   return (
-    <section id="projects" className="py-12 sm:py-16 lg:py-20">
-      <div className="bg-gradient-to-br from-gray-50 to-gray-100 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 overflow-hidden">
+    <section
+      id="projects"
+      className="py-16 sm:py-20 lg:py-28 bg-gradient-to-br from-gray-50 to-gray-100"
+    >
+      <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-16 xl:px-24">
+        {/* Heading */}
         <motion.div
           className="text-center"
           initial={{ opacity: 0, y: 20 }}
@@ -29,11 +40,23 @@ const Projects = () => {
             Showcasing our latest and greatest work
           </p>
         </motion.div>
-        <div className="mt-12 grid gap-8 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2">
-          {projects.map((project, index) => (
+
+        {/* Featured Project */}
+        <motion.div
+          initial={{ opacity: 0, scale: 0.95 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.6, delay: 0.3 }}
+          className="mt-16"
+        >
+          <ProjectCard {...featuredProject} index={0} isFeatured />
+        </motion.div>
+
+        {/* Rest of Projects */}
+        <div className="mt-16 grid gap-10 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2">
+          {visibleProjects.map((project, index) => (
             <motion.div
               key={index}
-              initial={{ opacity: 0, scale: 0.9 }}
+              initial={{ opacity: 0, scale: 0.95 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.4, delay: index * 0.2 }}
               className={`transition duration-300 ${
@@ -44,10 +67,22 @@ const Projects = () => {
               onMouseEnter={() => setHoveredIndex(index)}
               onMouseLeave={() => setHoveredIndex(null)}
             >
-              <ProjectCard {...project} index={index} />
+              <ProjectCard {...project} index={index + 1} />
             </motion.div>
           ))}
         </div>
+
+        {/* Show More Button */}
+        {restProjects.length > 2 && (
+          <div className="mt-12 text-center">
+            <button
+              onClick={() => setShowAll((prev) => !prev)}
+              className="px-6 py-3 bg-black text-white rounded-md shadow-md hover:bg-gray-700 transition duration-300"
+            >
+              {showAll ? "Show Less Projects" : "Show More Projects"}
+            </button>
+          </div>
+        )}
       </div>
     </section>
   );
