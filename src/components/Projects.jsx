@@ -75,12 +75,14 @@ const Projects = () => {
         {/* Show More Button */}
         {restProjects.length > 2 && (
           <div className="mt-12 text-center">
-            <button
+            <motion.button
               onClick={() => setShowAll((prev) => !prev)}
-              className="px-6 py-3 bg-black text-white rounded-md shadow-md hover:bg-gray-700 transition duration-300"
+              className="px-8 py-3 bg-white text-black border border-black rounded-full transition duration-300 shadow-sm"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.98 }}
             >
               {showAll ? "Show Less Projects" : "Show More Projects"}
-            </button>
+            </motion.button>
           </div>
         )}
       </div>
