@@ -134,7 +134,7 @@ const ProjectCard = ({
 
         {isFeatured && (
           <motion.span
-            className="absolute top-4 left-4 bg-black text-white text-xs font-semibold px-3 py-1 rounded-full shadow-lg"
+            className="absolute top-4 left-4 bg-white text-black text-xs sm:text-sm font-semibold px-4 py-1 rounded-full shadow-lg"
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.3, delay: 0.2 }}

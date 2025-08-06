@@ -1,10 +1,10 @@
 import React from "react";
 import { motion, useTransform, useViewportScroll } from "framer-motion";
 // import bgImg from "../assets/background gray aesthetic.jpg"; // Ensure this path is correct
-// import bgImg from "../assets/Blue wallpaper.jpg"; 
-import bgImg from "../assets/bg-img.jpg"; 
-// import bgImg from "../assets/light & dark grey wallpaper.jpg"; 
-// import bgImg from "../assets/background gray aesthetic.jpg"; 
+// import bgImg from "../assets/Blue wallpaper.jpg";
+import bgImg from "../assets/bg-img.jpg";
+// import bgImg from "../assets/light & dark grey wallpaper.jpg";
+// import bgImg from "../assets/background gray aesthetic.jpg";
 
 const VideoHeader = () => {
   const { scrollY } = useViewportScroll();
@@ -21,7 +21,7 @@ const VideoHeader = () => {
         />
       </motion.div>
       {/* Overlay */}
-      
+
       {/* Content */}
       <div className="relative max-w-7xl mx-auto py-24 px-4 sm:py-32 sm:px-6 lg:px-8 h-full flex flex-col justify-center">
         <motion.h1
@@ -30,7 +30,7 @@ const VideoHeader = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
-          Welcome to Three Noob Coders
+         Professional Websites For Modern Businesses
         </motion.h1>
         <motion.p
           className="mt-6 text-2xl text-white max-w-3xl font-large"
@@ -38,9 +38,7 @@ const VideoHeader = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
         >
-          Three engineering students fueled by caffeine and creativity,
-          dedicated to bringing your projects to life. We’re not pros, but we’re
-          getting there - slowly but surely!
+          The Best & Affordable Website Development Services
         </motion.p>
       </div>
     </div>

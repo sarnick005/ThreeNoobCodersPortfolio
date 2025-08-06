@@ -4,7 +4,7 @@
       "name": "Basic",
       "price": "2999",
       "features": [
-        "3-day delivery",
+        "3-days delivery",
         "1 revision",
         "1-2 Page",
         "Responsive Design",
@@ -19,9 +19,9 @@
       "price": "5999",
       "features": [
         "7-day delivery",
-        "3 revision",
+        "3 revisions",
         "3-5 Pages",
-        "All the basic tier features",
+        "All the Basic tier features",
         "Map, Review",
         "Detailed code comments",
         "API Development & Integration"
@@ -32,8 +32,9 @@
       "name": "Premium",
       "price": "9999",
       "features": [
-        "21-day delivery",
-        "5-8 pages",
+        "21-days delivery",
+        "5 revisions",
+        "5-8 Pages",
         "Custom Functionality",
         "All the Standard tier features",
         "Chat, Blog, E-commerce Integration",
@@ -47,11 +48,12 @@
       "name": "Basic",
       "price": "999",
       "features": [
-        "2 pages",
-        "Basic SEO Setup",
+        "2-days delivery",
+        "1 Page",
+        "1 revision",
         "Static Website (No Interactivity)",
-        "Simple Contact Form",
-        "Basic Animations"
+        "Mobile Responsive",
+        "Domain and Hosting"
       ],
       "image": "https://i.pinimg.com/564x/10/27/4f/10274fc673de5e1ff38e32bf56e741da.jpg"
     },
@@ -59,22 +61,24 @@
       "name": "Standard",
       "price": "2499",
       "features": [
-        "3-4 Pages",
-        "Responsive Design for Mobile and Desktop",
-        "Interactive Elements (Dropdowns, Modals)",
-        "Google Fonts & Icons Integration",
-        "Better Animations (CSS or JS-based)"
+        "5-days delivery",
+        "3 Pages",
+        "2 revisions",
+        "All the Basic tier features",
+        "Better Animations",
+        "Basic SEO"
       ],
       "image": "https://i.pinimg.com/736x/a6/b6/2f/a6b62f4e4a5a0d7ef12f95e2780b57b4.jpg"
     },
     {
       "name": "Premium",
-      "price": "3499",
+      "price": "4499",
       "features": [
-        "5-7 Pages",
-        "Single Page Application (SPA) with React",
-        "Enhanced Performance Optimization",
-        "Custom UI Components (Tailwind, Framer)",
+        "7-days delivery",
+        "5 Pages",
+        "3 revisions",
+        "All the Standard tier features",
+        "Single Page Application (SPA)",
         "Integration with External APIs"
       ],
       "image": "https://i.pinimg.com/564x/ca/a1/fb/caa1fb2996669a2133be0cf6f8c91bdc.jpg"
@@ -83,9 +87,11 @@
   "Figma to Web": [
     {
       "name": "Basic",
-      "price": "1999",
+      "price": "2999",
       "features": [
-        "2-3 pages",
+        "3-days delivery",
+        "2-3 Pages",
+        "1 revision",
         "Frontend Product Development",
         "Pixel-perfect accuracy",
         "Responsive design for desktop and mobile",
@@ -96,14 +102,16 @@
     },
     {
       "name": "Standard",
-      "price": "3999",
+      "price": "5999",
       "features": [
-        "3-5 Pages",
+        "3-days delivery",
+        "3-4 Pages",
+        "1 revision",
         "Frontend Product Development",
         "Responsive design across multiple devices",
         "Advanced animations and micro-interactions",
         "SEO-friendly code",
-        "Integration of basic JavaScript functionalities (forms, maps)"
+        "Source code"
       ],
       "image": "https://i.pinimg.com/564x/96/82/11/968211cf857efe1a8387a4e7817f5a0a.jpg"
     },
@@ -111,12 +119,14 @@
       "name": "Premium",
       "price": "9999",
       "features": [
-        "8-10 pages",
+        "21-days delivery",
+        "5-7 Pages",
+        "1 revision",
         "Fullstack Product Development",
         "Custom API Integration",
         "Scalable UI Systems",
         "Ongoing Support",
-        "Advanced optimization (lazy loading, minification)"
+        "Advanced optimization"
       ],
       "image": "https://i.pinimg.com/564x/4a/fa/1f/4afa1f5e12d6a741be4b6ea49690384d.jpg"
     }
