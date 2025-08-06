@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { useNavigate } from "react-router-dom";
 
 const Slide = ({ url, containerDimensions, description }) => {
   const [hovered, setHovered] = useState(false);
@@ -40,8 +41,8 @@ const Slide = ({ url, containerDimensions, description }) => {
 const ProjectCard = ({
   title,
   description,
-  imageUrls,
-  index,
+  imageUrls = [],
+  index = 0,
   liveDemo,
   isFeatured = false,
 }) => {
@@ -51,6 +52,7 @@ const ProjectCard = ({
   });
   const [hovered, setHovered] = useState(false);
   const containerRef = useRef(null);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const updateDimensions = () => {
@@ -66,6 +68,7 @@ const ProjectCard = ({
     return () => window.removeEventListener("resize", updateDimensions);
   }, [isFeatured]);
 
+  // Slider settings
   const settings = {
     dots: true,
     infinite: true,
@@ -78,6 +81,9 @@ const ProjectCard = ({
     pauseOnHover: true,
     arrows: false,
   };
+
+  const displayImages =
+    imageUrls && imageUrls.length > 0 ? imageUrls : ["/placeholder-image.jpg"];
 
   return (
     <motion.div
@@ -92,9 +98,10 @@ const ProjectCard = ({
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
     >
+      {/* Image Slider */}
       <div ref={containerRef} className="relative w-full overflow-hidden">
         <Slider {...settings}>
-          {imageUrls.map((url, i) => (
+          {displayImages.map((url, i) => (
             <Slide
               key={i}
               url={url}
@@ -104,35 +111,46 @@ const ProjectCard = ({
           ))}
         </Slider>
 
+        {/* Live Demo Button */}
         {hovered && liveDemo && (
-          <a
-            href={liveDemo}
-            target="_blank"
-            rel="noopener noreferrer"
+          <motion.button
+            onClick={() => {
+              if (liveDemo.startsWith("http")) {
+                window.open(liveDemo, "_blank", "noopener,noreferrer");
+              } else {
+                navigate(liveDemo);
+              }
+            }}
             className="absolute bottom-4 right-4 bg-white text-black rounded-full p-2 shadow-md hover:bg-gray-100 transition-colors duration-200 flex items-center"
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.2 }}
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
           >
             <span className="text-sm font-semibold">Live Demo</span>
-          </a>
+          </motion.button>
         )}
 
         {isFeatured && (
-          <span className="absolute top-4 left-4 bg-black text-white text-xs font-semibold px-3 py-1 rounded-full shadow-lg">
+          <motion.span
+            className="absolute top-4 left-4 bg-black text-white text-xs font-semibold px-3 py-1 rounded-full shadow-lg"
+            initial={{ opacity: 0, x: -20 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.3, delay: 0.2 }}
+          >
             Featured
-          </span>
+          </motion.span>
         )}
       </div>
-
       <div className="p-5">
         <h2
           className={`font-semibold text-gray-900 ${
             isFeatured ? "text-2xl mb-2" : "text-lg sm:text-xl"
           }`}
         >
-          {title}
+          {title || "Untitled Project"}
         </h2>
-        {/* {isFeatured && (
-          <p className="text-gray-600 text-sm leading-relaxed">{description}</p>
-        )} */}
       </div>
     </motion.div>
   );

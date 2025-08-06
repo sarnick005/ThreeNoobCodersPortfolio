@@ -2,45 +2,58 @@
   "Fullstack Webapp": [
     {
       "name": "Basic",
-      "price": "1999",
-      "features": ["3-4 Pages", "Responsive Design", "Contact Form","Basic Analytics Setup", "Basic Email Integration"],
-      "image":
-          "https://i.pinimg.com/736x/1b/72/99/1b7299a5f39dc14255daeaabfd401bc9.jpg"
-      
+      "price": "2999",
+      "features": [
+        "3-day delivery",
+        "1 revision",
+        "1-2 Page",
+        "Responsive Design",
+        "Content Upload",
+        "Source code",
+        "Basic Email Integration"
+      ],
+      "image": "https://i.pinimg.com/736x/1b/72/99/1b7299a5f39dc14255daeaabfd401bc9.jpg"
     },
     {
       "name": "Standard",
-      "price": "3999",
+      "price": "5999",
       "features": [
-        "5-7 Pages",
+        "7-day delivery",
+        "3 revision",
+        "3-5 Pages",
         "All the basic tier features",
-        "Map, Calender, Review, FAQ",
-        "Mobile Optimization",
-        "Interactive Elements (Sliders, Galleries)"
+        "Map, Review",
+        "Detailed code comments",
+        "API Development & Integration"
       ],
-       "image":
-          "https://i.pinimg.com/564x/54/17/f8/5417f86e5bdd7d49e00b2b5c1267e294.jpg"
+      "image": "https://i.pinimg.com/564x/54/17/f8/5417f86e5bdd7d49e00b2b5c1267e294.jpg"
     },
     {
       "name": "Premium",
       "price": "9999",
       "features": [
-        "8-10 pages",
+        "21-day delivery",
+        "5-8 pages",
         "Custom Functionality",
         "All the Standard tier features",
-        "Chat, Blog, E-commerce Integration"
+        "Chat, Blog, E-commerce Integration",
+        "SaaS Applications"
       ],
-      "image":
-          "https://i.pinimg.com/736x/fc/fa/7e/fcfa7ecb8e70529c0594cdb92e8a69ba.jpg"
+      "image": "https://i.pinimg.com/736x/fc/fa/7e/fcfa7ecb8e70529c0594cdb92e8a69ba.jpg"
     }
   ],
   "Basic Website": [
     {
       "name": "Basic",
       "price": "999",
-      "features": ["2 pages", "Basic SEO Setup", "Static Website (No Interactivity)","Simple Contact Form", "Basic Animations"],
-      "image":
-          "https://i.pinimg.com/564x/10/27/4f/10274fc673de5e1ff38e32bf56e741da.jpg"
+      "features": [
+        "2 pages",
+        "Basic SEO Setup",
+        "Static Website (No Interactivity)",
+        "Simple Contact Form",
+        "Basic Animations"
+      ],
+      "image": "https://i.pinimg.com/564x/10/27/4f/10274fc673de5e1ff38e32bf56e741da.jpg"
     },
     {
       "name": "Standard",
@@ -52,8 +65,7 @@
         "Google Fonts & Icons Integration",
         "Better Animations (CSS or JS-based)"
       ],
-       "image":
-          "https://i.pinimg.com/736x/a6/b6/2f/a6b62f4e4a5a0d7ef12f95e2780b57b4.jpg"
+      "image": "https://i.pinimg.com/736x/a6/b6/2f/a6b62f4e4a5a0d7ef12f95e2780b57b4.jpg"
     },
     {
       "name": "Premium",
@@ -65,30 +77,35 @@
         "Custom UI Components (Tailwind, Framer)",
         "Integration with External APIs"
       ],
-      "image":
-          "https://i.pinimg.com/564x/ca/a1/fb/caa1fb2996669a2133be0cf6f8c91bdc.jpg"
+      "image": "https://i.pinimg.com/564x/ca/a1/fb/caa1fb2996669a2133be0cf6f8c91bdc.jpg"
     }
   ],
   "Figma to Web": [
     {
       "name": "Basic",
       "price": "1999",
-      "features": ["2-3 pages","Frontend Product Development","Pixel-perfect accuracy", "Responsive design for desktop and mobile", "Basic animations and transitions","Optimized code for performance"],
-      "image":
-          "https://i.pinimg.com/564x/d3/db/f4/d3dbf4f4dc9a9b84c7ca415876b461dc.jpg"
+      "features": [
+        "2-3 pages",
+        "Frontend Product Development",
+        "Pixel-perfect accuracy",
+        "Responsive design for desktop and mobile",
+        "Basic animations and transitions",
+        "Optimized code for performance"
+      ],
+      "image": "https://i.pinimg.com/564x/d3/db/f4/d3dbf4f4dc9a9b84c7ca415876b461dc.jpg"
     },
     {
       "name": "Standard",
       "price": "3999",
       "features": [
-        "3-5 Pages","Frontend Product Development",
+        "3-5 Pages",
+        "Frontend Product Development",
         "Responsive design across multiple devices",
         "Advanced animations and micro-interactions",
         "SEO-friendly code",
         "Integration of basic JavaScript functionalities (forms, maps)"
       ],
-       "image":
-          "https://i.pinimg.com/564x/96/82/11/968211cf857efe1a8387a4e7817f5a0a.jpg"
+      "image": "https://i.pinimg.com/564x/96/82/11/968211cf857efe1a8387a4e7817f5a0a.jpg"
     },
     {
       "name": "Premium",
@@ -101,8 +118,7 @@
         "Ongoing Support",
         "Advanced optimization (lazy loading, minification)"
       ],
-      "image":
-          "https://i.pinimg.com/564x/4a/fa/1f/4afa1f5e12d6a741be4b6ea49690384d.jpg"
+      "image": "https://i.pinimg.com/564x/4a/fa/1f/4afa1f5e12d6a741be4b6ea49690384d.jpg"
     }
   ]
 }

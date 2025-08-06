@@ -7,7 +7,7 @@
       "./images/projects/art2.png",
       "./images/projects/art3.png"
     ],
-    "liveDemo": "http://localhost:5173/art/1"
+    "liveDemo": "/art/1"
   },
   {
     "title": "Edu Platform",
@@ -18,7 +18,7 @@
       "./images/projects/edu3.png",
       "./images/projects/edu4.png"
     ],
-    "liveDemo": "http://localhost:5173/edu/1"
+    "liveDemo": "/edu/1"
   },
   {
     "title": "Business Landing Page",
@@ -29,7 +29,7 @@
       "./images/projects/b_land3.png",
       "./images/projects/b_land4.png"
     ],
-    "liveDemo": "http://localhost:5173/business/1"
+    "liveDemo": "/business/1"
   },
   {
     "title": "Kolkata Nostalgic Cafe",
@@ -41,7 +41,7 @@
       "./images/projects/cafe4.png",
       "./images/projects/cafe5.png"
     ],
-    "liveDemo": "http://localhost:5173/cafe/1"
+    "liveDemo": "/cafe/1"
   },
   {
     "title": "Custom Cake Ordering Platform",
@@ -52,7 +52,7 @@
       "./images/projects/cake23.png",
       "./images/projects/cake24.png"
     ],
-    "liveDemo": "http://localhost:5173/cake/2"
+    "liveDemo": "/cake/2"
   },
 
   {
@@ -63,16 +63,18 @@
       "./images/projects/cake2.png",
       "./images/projects/cake3.png"
     ],
-    "liveDemo": "http://localhost:5173/cake/1"
+    "liveDemo": "/cake/1"
   },
   {
-    "title": "Social Media Platform",
-    "description": "A platform for users to connect and share content. This innovative social network combines the best features of existing platforms with unique elements. It offers customizable feeds, advanced privacy controls, and a built-in content creation suite. Users can join interest-based communities, participate in live discussions, and even monetize their content through an integrated marketplace. The platform also includes robust anti-harassment tools and promotes positive digital well-being.",
+    "title": "Gym",
+    "description": "A delightful and visually appealing website template designed for bakeries and cake shops. This platform showcases a wide range of cakes with beautiful galleries, customer reviews, and a smooth ordering experience. Features include customizable cake listings, real-time order tracking, festive deals, and an integrated contact form for custom cake inquiries. Perfect for attracting sweet-toothed customers with an elegant and modern design.",
     "imageUrls": [
-      "https://i.pinimg.com/564x/58/7f/af/587faf465b70ce9cd2dad618dbebf929.jpg",
-      "https://i.pinimg.com/564x/f9/a9/66/f9a966185316271eaf5fde972e2ccff7.jpg",
-      "https://i.pinimg.com/736x/5b/4f/54/5b4f54704ecc5aef7c80aa54ca265ffa.jpg"
+      "./images/projects/gym1.png",
+      "./images/projects/gym2.png",
+      "./images/projects/gym3.png",
+      "./images/projects/gym4.png",
+      "./images/projects/gym5.png"
     ],
-    "liveDemo": "https://social-media-demo.example.com"
+    "liveDemo": "/gym/1"
   }
 ]

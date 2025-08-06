@@ -88,7 +88,8 @@ const ContactUs = () => {
             Let's Connect
           </h2>
           <p className="text-lg sm:text-xl text-gray-600 max-w-2xl mx-auto mb-12">
-            Ready to bring your ideas to life? Reach out through any of these channels
+            Ready to bring your ideas to life? Reach out through any of these
+            channels
           </p>
         </motion.div>
 

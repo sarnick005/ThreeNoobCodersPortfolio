@@ -1,4 +1,3 @@
-import React from "react";
 import { Route, Routes } from "react-router-dom";
 import Home from "./pages/Homepage";
 import Education1 from "./templates/Education1";
@@ -7,6 +6,7 @@ import KolkataCafe from "./templates/Cafe1";
 import Business from "./templates/BusinessLandingPage";
 import Gallery1 from "./templates/Art1";
 import Cake2 from "./templates/Cake2";
+import GymWebsite from "./templates/Gym1";
 
 const App = () => {
   return (
@@ -18,6 +18,7 @@ const App = () => {
       <Route path="/cafe/1" element={<KolkataCafe />} />
       <Route path="/business/1" element={<Business />} />
       <Route path="/art/1" element={<Gallery1 />} />
+      <Route path="/gym/1" element={<GymWebsite />} />
     </Routes>
   );
 };
