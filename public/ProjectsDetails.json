@@ -1,5 +1,15 @@
 [
   {
+    "title": "Art Showcase Platform",
+    "description": "A beautifully designed platform for artists to exhibit and share their creations. This art-centric website allows users to explore galleries, follow their favorite artists, and even purchase original artwork. With immersive visuals and smooth animations, it provides a curated space for creativity. Features include artist portfolios, virtual exhibitions, and community art challenges that foster engagement and inspiration.",
+    "imageUrls": [
+      "./images/projects/art1.png",
+      "./images/projects/art2.png",
+      "./images/projects/art3.png"
+    ],
+    "liveDemo": "http://localhost:5173/art/1"
+  },
+  {
     "title": "Edu Platform",
     "description": "A modern and fully responsive e-learning platform designed for seamless cross-device experiences. Edu Platform features secure multi-gateway payment integration, intuitive course browsing, and real-time inventory management. It includes advanced search and filtering functionality, and offers detailed analytics for administrators through a powerful dashboard.",
     "imageUrls": [
@@ -8,7 +18,7 @@
       "./images/projects/edu3.png",
       "./images/projects/edu4.png"
     ],
-    "liveDemo": "https://template-projects-for-threenoobcode.vercel.app/edu/1"
+    "liveDemo": "http://localhost:5173/edu/1"
   },
   {
     "title": "Business Landing Page",
@@ -19,20 +29,7 @@
       "./images/projects/b_land3.png",
       "./images/projects/b_land4.png"
     ],
-    "liveDemo": "https://template-projects-for-threenoobcode.vercel.app/business-landing-page/1"
-  },
-  {
-    "title": "AI-Powered Chatbot",
-    "description": "Customer service bot with natural language processing capabilities. This advanced chatbot utilizes machine learning algorithms to understand and respond to customer queries in a human-like manner. It can handle multiple languages, learn from interactions to improve its responses over time, and seamlessly escalate complex issues to human agents when necessary. The chatbot integrates with various platforms including websites, messaging apps, and social media.",
-    "imageUrls": [
-      "./images/projects/v1.jpeg",
-      "./images/projects/v2.png",
-      "./images/projects/v3.jpeg",
-      "./images/projects/v4.jpeg",
-      "./images/projects/v5.jpeg",
-      "./images/projects/v6.jpeg"
-    ],
-    "liveDemo": "https://ai-chatbot-demo.example.com"
+    "liveDemo": "http://localhost:5173/business/1"
   },
   {
     "title": "Kolkata Nostalgic Cafe",
@@ -44,28 +41,29 @@
       "./images/projects/cafe4.png",
       "./images/projects/cafe5.png"
     ],
-    "liveDemo": "https://template-projects-for-threenoobcode.vercel.app/cafe/1"
+    "liveDemo": "http://localhost:5173/cafe/1"
+  },
+  {
+    "title": "Custom Cake Ordering Platform",
+    "description": "An elegant and user-friendly website designed for custom cake orders and bakery showcases. Customers can browse through high-quality images of cakes, filter by occasions like birthdays or weddings, and place personalized orders with preferred flavors, sizes, and decorations. The site features a responsive design, real-time availability updates, customer testimonials, and integration with delivery services for a seamless user experience.",
+    "imageUrls": [
+      "./images/projects/cake21.png",
+      "./images/projects/cake22.png",
+      "./images/projects/cake23.png",
+      "./images/projects/cake24.png"
+    ],
+    "liveDemo": "http://localhost:5173/cake/2"
   },
 
   {
-    "title": "Social Media Platform",
-    "description": "A platform for users to connect and share content. This innovative social network combines the best features of existing platforms with unique elements. It offers customizable feeds, advanced privacy controls, and a built-in content creation suite. Users can join interest-based communities, participate in live discussions, and even monetize their content through an integrated marketplace. The platform also includes robust anti-harassment tools and promotes positive digital well-being.",
+    "title": "Cake Shop Website",
+    "description": "A delightful and visually appealing website template designed for bakeries and cake shops. This platform showcases a wide range of cakes with beautiful galleries, customer reviews, and a smooth ordering experience. Features include customizable cake listings, real-time order tracking, festive deals, and an integrated contact form for custom cake inquiries. Perfect for attracting sweet-toothed customers with an elegant and modern design.",
     "imageUrls": [
-      "https://i.pinimg.com/564x/58/7f/af/587faf465b70ce9cd2dad618dbebf929.jpg",
-      "https://i.pinimg.com/564x/f9/a9/66/f9a966185316271eaf5fde972e2ccff7.jpg",
-      "https://i.pinimg.com/736x/5b/4f/54/5b4f54704ecc5aef7c80aa54ca265ffa.jpg"
+      "./images/projects/cake1.png",
+      "./images/projects/cake2.png",
+      "./images/projects/cake3.png"
     ],
-    "liveDemo": "https://social-media-demo.example.com"
-  },
-  {
-    "title": "Social Media Platform",
-    "description": "A platform for users to connect and share content. This innovative social network combines the best features of existing platforms with unique elements. It offers customizable feeds, advanced privacy controls, and a built-in content creation suite. Users can join interest-based communities, participate in live discussions, and even monetize their content through an integrated marketplace. The platform also includes robust anti-harassment tools and promotes positive digital well-being.",
-    "imageUrls": [
-      "https://i.pinimg.com/564x/58/7f/af/587faf465b70ce9cd2dad618dbebf929.jpg",
-      "https://i.pinimg.com/564x/f9/a9/66/f9a966185316271eaf5fde972e2ccff7.jpg",
-      "https://i.pinimg.com/736x/5b/4f/54/5b4f54704ecc5aef7c80aa54ca265ffa.jpg"
-    ],
-    "liveDemo": "https://social-media-demo.example.com"
+    "liveDemo": "http://localhost:5173/cake/1"
   },
   {
     "title": "Social Media Platform",
