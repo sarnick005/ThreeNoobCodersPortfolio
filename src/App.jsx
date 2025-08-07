@@ -7,6 +7,7 @@ import Business from "./templates/BusinessLandingPage";
 import Gallery1 from "./templates/Art1";
 import Cake2 from "./templates/Cake2";
 import GymWebsite from "./templates/Gym1";
+import Portfolio from "./templates/Portfolio1";
 
 const App = () => {
   return (
@@ -19,6 +20,7 @@ const App = () => {
       <Route path="/business/1" element={<Business />} />
       <Route path="/art/1" element={<Gallery1 />} />
       <Route path="/gym/1" element={<GymWebsite />} />
+      <Route path="/portfolio/1" element={<Portfolio />} />
     </Routes>
   );
 };

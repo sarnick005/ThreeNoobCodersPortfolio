@@ -10,15 +10,15 @@
     "liveDemo": "/art/1"
   },
   {
-    "title": "Edu Platform",
-    "description": "A modern and fully responsive e-learning platform designed for seamless cross-device experiences. Edu Platform features secure multi-gateway payment integration, intuitive course browsing, and real-time inventory management. It includes advanced search and filtering functionality, and offers detailed analytics for administrators through a powerful dashboard.",
+    "title": "Portfolio Template",
+    "description": "A sleek and responsive portfolio website template built to showcase your work in style. Designed for freelancers, designers, and developers, it features smooth animations, dark/light theme toggle, project filtering, and mobile-first responsiveness. It includes an about section, contact form, and dynamic project gallery to impress potential clients.",
     "imageUrls": [
-      "./images/projects/edu1.png",
-      "./images/projects/edu2.png",
-      "./images/projects/edu3.png",
-      "./images/projects/edu4.png"
+      "./images/projects/portfolio1.png",
+      "./images/projects/portfolio2.png",
+      "./images/projects/portfolio3.png",
+      "./images/projects/portfolio4.png"
     ],
-    "liveDemo": "/edu/1"
+    "liveDemo": "/portfolio/1"
   },
   {
     "title": "Business Landing Page",
@@ -30,6 +30,17 @@
       "./images/projects/b_land4.png"
     ],
     "liveDemo": "/business/1"
+  },
+  {
+    "title": "Edu Platform",
+    "description": "A modern and fully responsive e-learning platform designed for seamless cross-device experiences. Edu Platform features secure multi-gateway payment integration, intuitive course browsing, and real-time inventory management. It includes advanced search and filtering functionality, and offers detailed analytics for administrators through a powerful dashboard.",
+    "imageUrls": [
+      "./images/projects/edu1.png",
+      "./images/projects/edu2.png",
+      "./images/projects/edu3.png",
+      "./images/projects/edu4.png"
+    ],
+    "liveDemo": "/edu/1"
   },
   {
     "title": "Kolkata Nostalgic Cafe",
